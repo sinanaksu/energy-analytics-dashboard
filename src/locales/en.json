@@ -1,0 +1,11 @@
+{
+    "user": "User",
+    "signin": "SignIn",
+    "signup": "Signup",
+    "logout": "Logout",
+    "dashboard": "Dashboard",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "settings": "Settings"
+  }

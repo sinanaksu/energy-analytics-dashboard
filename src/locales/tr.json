@@ -1,0 +1,11 @@
+{
+  "user": "Kullanıcı",
+  "signin": "Giriş Yap",
+  "signup": "Kayıt Ol",
+  "logout": "Çıkış",
+  "dashboard": "Göstergeler",
+  "name": "Ad",
+  "email": "Eposta",
+  "password": "Şifre",
+  "settings": "Ayarlar"
+}
