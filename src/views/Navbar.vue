@@ -82,6 +82,6 @@ export default {
   background: #f1f8fe;
 }
 .bg-sub-bar {
- background: #7dd5bd;
+ background: rgb(167,218,66)
 }
 </style>
