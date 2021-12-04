@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="navbar navbar-expand-lg bg-nav navbar-light"
+    class="navbar navbar-expand-lg bg-nav navbar-light"
     >
       <div class="container">
         <router-link class="navbar-brand" to="/">
@@ -33,12 +33,15 @@
                 id="dropdownUser"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                >User</a
+              >
+                {{ this.$store.state.user.username }}</a
               >
               <ul class="dropdown-menu" aria-labelledby="dropdownUser">
                 <li><a class="dropdown-item" href="#">Setting</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">{{ $t("logout") }}</a>
+                  <router-link class="dropdown-item" to="/logout">{{
+                    $t("logout")
+                  }}</router-link>
                 </li>
               </ul>
             </li>
@@ -49,7 +52,13 @@
     <div class="container-fluid bg-sub-bar p-2 mb-4">
       <div class="container">
         <div class="row">
-          <div class="col"> {{ $route.name }}</div>
+          <div class="col-sm-6 col-md-8 col-lg-9">{{ $route.name }}</div>
+          <div class="col-sm-6 col-md-4 col-lg-3 text-end">
+            <div class="row">
+              <div class="col"><LocaleSwitch class="mr-5" /></div>
+              <div class="col"><ThemeSwitch /></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -57,9 +66,15 @@
 </template>
 
 <script>
+import LocaleSwitch from "../components/LocaleSwitch.vue";
+import ThemeSwitch from "../components/ThemeSwitch.vue";
+
 export default {
   name: "Navbar",
-  components: {},
+  components: {
+    LocaleSwitch,
+    ThemeSwitch,
+  },
 };
 </script>
 <style scoped>
@@ -67,6 +82,6 @@ export default {
   background: #f1f8fe;
 }
 .bg-sub-bar {
-  background: #7dd5bd;
+ background: #7dd5bd;
 }
 </style>
