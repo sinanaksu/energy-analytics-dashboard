@@ -1,11 +1,22 @@
 {
     "user": "User",
-    "signin": "SignIn",
-    "signup": "Signup",
+    "signin": "Sign In",
+    "signup": "Sign Up",
     "logout": "Logout",
     "dashboard": "Dashboard",
     "name": "Name",
     "email": "Email",
     "password": "Password",
-    "settings": "Settings"
+    "settings": "Settings",
+    "darkmode": "Dark Mode",
+    "lightmode": "Light Mode",
+    "error": {
+      "INVALID_EMAIL" : "Please enter a valid email address.",
+      "INVALID_PASSWORD" : "Please enter a strong password with at least 8 characters, at least one capital letter and at least one number.",
+      "INVALID_USERNAME" : "Please enter a name consisting of letters and a minimum of 8 characters.",
+      "USER_NOT_FOUND" : "Please check your email and password."
+    },
+    "message": {
+      "logout":"You have exited safely. Goodbye."
+    }
   }

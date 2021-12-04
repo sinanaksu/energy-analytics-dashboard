@@ -7,5 +7,16 @@
   "name": "Ad",
   "email": "Eposta",
   "password": "Şifre",
-  "settings": "Ayarlar"
+  "settings": "Ayarlar",
+  "darkmode": "Koyu Tema",
+  "lightmode": "Açık Tema",
+  "error": {
+    "INVALID_EMAIL" : "Lütfen geçerli bir email adresi girin.",
+    "INVALID_PASSWORD" : "Lütfen en az 1 sayı 1 büyük harf içeren minimum 8 karakterli güçlü bir şifre girin.",
+    "INVALID_USERNAME" : "Lütfen harflerden oluşan minimum 8 karakter bir ad girin.",
+    "USER_NOT_FOUND" : "Lütfen email adresi ve şifrenizi kontrol edin."
+  },
+  "message": {
+    "logout":"Güvenli çıkış yaptınız. Hoşçakalın."
+  }
 }
