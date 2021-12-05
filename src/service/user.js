@@ -1,39 +1,27 @@
 import axios from "axios";
-import authHeader from '../utils/authHeader';
+import authHeader from "../utils/authHeader";
 
-const API_URL = process.env.API_URL;
+const API_URL = "http://localhost:5000/v1/";
 
-class UserSerivce {
-  login(user) {
-    return axios
-      .post(API_URL + "user/login", {
-        email: user.email,
-        password: user.password,
-      })
-      .then((response) => {
-        if (response.data.accessToken) {
-          localStorage.setItem("user", JSON.stringify(response.data));
-        }
+export const login = (user) => {
+  return axios.post(API_URL + "user/login", {
+    email: user.email,
+    password: user.password,
+  });
+};
 
-        return response.data;
-      });
-  }
+export const logout = () => {
+  localStorage.removeItem("user");
+};
 
-  logout() {
-    localStorage.removeItem("user");
-  }
+export const register = (user) => {
+  return axios.post(API_URL + "user/register", {
+    email: user.email,
+    password: user.password,
+    name: user.name,
+  });
+};
 
-  register(user) {
-    return axios.post(API_URL + "user/register", {
-      email: user.email,
-      password: user.password,
-      name: user.name,
-    });
-  }
-
-  getUser() {
-    return axios.get(API_URL + "user/me", { headers: authHeader() });
-  }
-}
-
-export default new UserSerivce();
+export const getUser = () => {
+  return axios.get(API_URL + "user/me", { headers: authHeader() });
+};
