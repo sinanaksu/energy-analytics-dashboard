@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span type="button" @click="switchRun()" > {{ switchTitle }} </span>
+    <span type="button" @click="switchRun()" > <span v-html="switchTitle"></span> </span>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     switchTitle: function() {
-      return this.$store.state.darkmode ? this.$t('lightmode') : this.$t('darkmode')
+      return this.$store.state.darkmode ? this.$t('lightmode') + ' <i class="bi bi-moon"></i>' : this.$t('darkmode') + ' <i class="bi bi-moon-fill"></i>'
     }
   }
 }
