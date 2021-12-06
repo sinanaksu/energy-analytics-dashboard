@@ -4,12 +4,20 @@
   "signup": "Kayıt Ol",
   "logout": "Çıkış",
   "dashboard": "Göstergeler",
+  "facilities": "Tesisler",
   "name": "Ad",
   "email": "Eposta",
   "password": "Şifre",
   "settings": "Ayarlar",
   "darkmode": "Koyu Tema",
   "lightmode": "Açık Tema",
+  "remove": "Sil",
+  "edit": "Düzenle",
+  "yes": "Evet",
+  "no": "Hayır",
+  "ok": "Tamam",
+  "close": "Kapat",
+  "day": "Gün",
   "error": {
     "INVALID_EMAIL" : "Lütfen geçerli bir email adresi girin.",
     "INVALID_PASSWORD" : "Lütfen en az 1 sayı 1 büyük harf içeren minimum 8 karakterli güçlü bir şifre girin.",
@@ -18,5 +26,16 @@
   },
   "message": {
     "logout":"Güvenli çıkış yaptınız. Hoşçakalın."
+  },
+  "facility": {
+    "name": "Tesis Adı",
+    "startdate": "Hizmet Başlangıcı",
+    "enddate": "Hizmet Bitişi",
+    "remainingday": "Kalan Gün",
+    "workers": "Çalışan Sayısı",
+    "special": "Özel Tesis",
+    "energydata": "Enerji Kullanım Verileri",
+    "add": "Tesis Ekle"
+
   }
 }

@@ -4,12 +4,20 @@
     "signup": "Sign Up",
     "logout": "Logout",
     "dashboard": "Dashboard",
+    "facilities": "Facilities",
     "name": "Name",
     "email": "Email",
     "password": "Password",
     "settings": "Settings",
     "darkmode": "Dark Mode",
     "lightmode": "Light Mode",
+    "remove": "Remove",
+    "edit": "Edit",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "Ok",
+    "close": "Close",
+    "day": "Day",
     "error": {
       "INVALID_EMAIL" : "Please enter a valid email address.",
       "INVALID_PASSWORD" : "Please enter a strong password with at least 8 characters, at least one capital letter and at least one number.",
@@ -18,5 +26,15 @@
     },
     "message": {
       "logout":"You have exited safely. Goodbye."
+    },
+    "facility": {
+      "name": "Facility Name",
+      "startdate": "Service Start Date",
+      "enddate": "Service End Date",
+      "remainingday": "Remaining Day",
+      "workers": "Number of Workers",
+      "special": "Special",
+      "energydata": "Energy Usage Data",
+      "add": "Add Facility"
     }
   }
