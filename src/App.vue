@@ -2,7 +2,9 @@
   <div id="app" v-bind:class="{ dark: this.$store.state.darkmode }">
     <Navbar v-show="navbarShow" />
     <div class="container">
+      <transition name="fade" mode="out-in">
         <router-view />
+      </transition>
     </div>
   </div>
 </template>
@@ -36,6 +38,23 @@ export default {
   left: 0;
   top: 0;
   position: fixed;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+.logo {
+  -webkit-filter: drop-shadow(0 0 1px rgb(255, 255, 255));
+  filter: drop-shadow(0 0 1px rgb(255, 255, 255));
 }
 
 :root {
