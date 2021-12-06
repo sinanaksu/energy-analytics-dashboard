@@ -21,8 +21,10 @@
         <div class="collapse navbar-collapse" id="navbars1">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link active" aria-current="page" to="/">Dashboard</router-link
-              >
+              <router-link class="nav-link" aria-current="page" to="/">{{ $t('dashboard')}}</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" aria-current="page" to="/facilities">{{ $t('facilities')}}</router-link>
             </li>
           </ul>
           <ul class="navbar-nav mb-2 mb-lg-0">
@@ -52,7 +54,7 @@
     <div class="container-fluid bg-sub-bar p-2 mb-4">
       <div class="container">
         <div class="row">
-          <div class="col-sm-6 col-md-8 col-lg-9">{{ $route.name }}</div>
+          <div class="col-sm-6 col-md-8 col-lg-9">{{ $t($route.name) }}</div>
           <div class="col-sm-6 col-md-4 col-lg-3 text-end">
             <div class="row">
               <div class="col"><LocaleSwitch class="mr-5" /></div>
