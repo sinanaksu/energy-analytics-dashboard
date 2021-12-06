@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar v-show="navbarShow" />
     <div class="container">
-      <router-view />
+        <router-view />
     </div>
   </div>
 </template>
@@ -13,6 +13,15 @@ export default {
   name: "App",
   components: {
     Navbar,
+  },
+  computed: {
+    navbarShow() {
+      if (this.$route.path == "/register" || this.$route.path == "/login") {
+        return false;
+      } else {
+        return true;
+      }
+    },
   },
 };
 </script>
