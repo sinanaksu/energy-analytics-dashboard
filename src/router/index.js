@@ -4,6 +4,7 @@ import Home from "../views/Home.vue";
 import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
+import Facilities from "../views/Facilities.vue"
 
 Vue.use(Router);
 
@@ -12,8 +13,14 @@ const router = new Router({
   routes: [
     {
       path: "/",
-      name: "Dashboard",
+      name: "dashboard",
       component: Home,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: "/facilities",
+      name: "facilities",
+      component: Facilities,
       meta: { requiresAuth: true }
     },
     {
