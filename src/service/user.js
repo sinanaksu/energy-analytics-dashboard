@@ -1,7 +1,7 @@
 import axios from "axios";
 import authHeader from "../utils/authHeader";
 
-const API_URL = "http://localhost:5000/v1/";
+const API_URL = process.env.VUE_APP_API_URL;
 
 export const login = (user) => {
   return axios.post(API_URL + "user/login", {
