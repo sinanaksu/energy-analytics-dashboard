@@ -11,11 +11,16 @@
 
 <script>
 import Navbar from "./views/Navbar.vue";
+import { mapActions } from 'vuex'
+
 export default {
   name: "App",
   components: {
     Navbar,
   },
+    methods: {
+    ...mapActions(['tokenControl',])
+    },
   computed: {
     navbarShow() {
       if (this.$route.path == "/register" || this.$route.path == "/login") {
@@ -25,6 +30,9 @@ export default {
       }
     },
   },
+  mounted() {
+      this.tokenControl()
+  }
 };
 </script>
 
@@ -38,6 +46,7 @@ export default {
   left: 0;
   top: 0;
   position: fixed;
+  overflow-y: scroll;
 }
 
 .fade-enter-active,
@@ -64,15 +73,15 @@ export default {
 
   .dark {
     background-image: none !important;
-    background-color: rgb(112, 112, 112);
-
+    background-color: rgb(53, 53, 53);
+    $card-bg: rgb(167, 167, 167);
     $enable-gradients: true;
-    $primary: #4e7296;
+    $primary: #002b57;
     $secondary: #afafaf;
-    $success: #6d8a76;
+    $success: #007e2a;
     $dark: #000;
-    $danger: rgb(116, 77, 77);
-    $white:    rgb(133, 30, 30);
+    $danger: rgb(111, 0, 0);
+    $white:    rgb(255, 255, 255);
 
     $theme-colors: (
       "white": $white,
