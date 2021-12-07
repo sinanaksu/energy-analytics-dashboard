@@ -7,6 +7,7 @@ import i18n from './i18n'
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 Vue.config.productionTip = false
 Vue.use(Vuex);
