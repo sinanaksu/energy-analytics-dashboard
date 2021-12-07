@@ -6,11 +6,18 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     user : '',
-    darkmode: false
+    darkmode: false,
+    facilityReload: false
   },
   mutations: {
   },
   actions: {
+    tokenControl() {
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user && user.accessToken) {
+        this.state.user = user
+      }
+    }
   },
   modules: {
   }
