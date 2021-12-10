@@ -1,4 +1,5 @@
 import axios from "axios";
+import store from "../store";
 import authHeader from "../utils/authHeader";
 
 const API_URL = process.env.VUE_APP_API_URL;
@@ -12,6 +13,7 @@ export const login = (user) => {
 
 export const logout = () => {
   localStorage.removeItem("user");
+  store.state.user = ''
 };
 
 export const register = (user) => {

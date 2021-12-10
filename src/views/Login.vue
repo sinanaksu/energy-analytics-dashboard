@@ -29,6 +29,14 @@
                 />
                 <label for="passInput">{{ $t('password')}}</label>
               </div>
+              <div class="form-floating mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" v-model="rememberMe" id="checkInput">
+                  <label class="form-check-label" for="checkInput">
+                    {{ $t('rememberme')}}
+                  </label>
+                </div>
+              </div>
               <div class="d-grid">
                 <button
                   class="btn btn-success btn-login text-uppercase"
@@ -74,6 +82,7 @@ import User from "../model/user";
 import { login } from "../service/user";
 import LocaleSwitch from "../components/LocaleSwitch.vue";
 import ThemeSwitch from "../components/ThemeSwitch.vue";
+import { mapState } from "vuex";
 
 export default {
   name: "Login",
@@ -87,7 +96,11 @@ export default {
       submitted: false,
       successful: false,
       message: "",
+      rememberMe: true
     };
+  },
+  computed: {
+    ...mapState(["facilityUsageReload"]),
   },
   methods: {
     handleLogin() {
@@ -97,7 +110,9 @@ export default {
         (res) => {
           if(res.data.accessToken) {
               this.$store.state.user = res.data
+              if(this.rememberMe) {
               localStorage.setItem("user", JSON.stringify(res.data))
+              }
               this.$router.push("/")
           } else {
             this.message = this.$t('error.' + res.data.error);

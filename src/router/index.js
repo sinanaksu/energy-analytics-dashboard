@@ -5,6 +5,8 @@ import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import Facilities from "../views/Facilities.vue"
+import store from "../store";
+
 
 Vue.use(Router);
 
@@ -36,14 +38,14 @@ const router = new Router({
     {
       path: "/logout",
       component: Logout,
-      meta: { guest: true }
+      meta: { requiresAuth: true }
     },
   ],
 });
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
-    if (localStorage.getItem("user") == null) {
+    if (localStorage.getItem("user") == null && store.state.user == '') {
       next({
         path: "/login",
         params: { nextUrl: to.fullPath },
@@ -61,7 +63,7 @@ router.beforeEach((to, from, next) => {
       }
     }
   } else if (to.matched.some((record) => record.meta.guest)) {
-    if (localStorage.getItem("user") == null) {
+    if (localStorage.getItem("user") == null || store.state.user == '') {
       next();
     } else {
       next({ name: "Dashboard" });
