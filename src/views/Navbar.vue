@@ -39,7 +39,6 @@
                 {{ this.$store.state.user.username }}</a
               >
               <ul class="dropdown-menu" aria-labelledby="dropdownUser">
-                <li><a class="dropdown-item" href="#">Setting</a></li>
                 <li>
                   <router-link class="dropdown-item" to="/logout">{{
                     $t("logout")
