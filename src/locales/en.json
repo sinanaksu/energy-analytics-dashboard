@@ -3,8 +3,10 @@
     "signin": "Sign In",
     "signup": "Sign Up",
     "logout": "Logout",
+    "rememberme": "Remember me",
     "dashboard": "Dashboard",
     "facilities": "Facilities",
+    "facilityusage": "Energy Usage",
     "name": "Name",
     "email": "Email",
     "password": "Password",
@@ -18,6 +20,7 @@
     "ok": "Ok",
     "close": "Close",
     "day": "Day",
+    "back": "Back",
     "error": {
       "INVALID_EMAIL" : "Please enter a valid email address.",
       "INVALID_PASSWORD" : "Please enter a strong password with at least 8 characters, at least one capital letter and at least one number.",
@@ -29,12 +32,25 @@
     },
     "facility": {
       "name": "Facility Name",
-      "startdate": "Service Start Date",
-      "enddate": "Service End Date",
+      "startdate": "Start Date",
+      "enddate": "End Date",
       "remainingday": "Remaining Day",
       "workers": "Number of Workers",
       "special": "Special",
       "energydata": "Energy Usage Data",
-      "add": "Add Facility"
+      "add": "Add Facility",
+      "usageadd": "Add Usage",
+      "unit": "Unit",
+      "daterange": "Date Range",
+      "usage": "Usage",
+      "total": "Total",
+      "discounted": "Discounted"
+    } ,
+    "analystics": {
+      "daymw": "Power Drawn Today",
+      "dayhz": "Average Frequency",
+      "dayvolt": "Average Voltage",
+      "dayamper": "Average Current"
+  
     }
   }

@@ -3,8 +3,10 @@
   "signin": "Giriş Yap",
   "signup": "Kayıt Ol",
   "logout": "Çıkış",
+  "rememberme": "Beni Hatırla",
   "dashboard": "Göstergeler",
   "facilities": "Tesisler",
+  "facilityusage": "Enerji Tüketimleri",
   "name": "Ad",
   "email": "Eposta",
   "password": "Şifre",
@@ -18,6 +20,7 @@
   "ok": "Tamam",
   "close": "Kapat",
   "day": "Gün",
+  "back": "Geri",
   "error": {
     "INVALID_EMAIL" : "Lütfen geçerli bir email adresi girin.",
     "INVALID_PASSWORD" : "Lütfen en az 1 sayı 1 büyük harf içeren minimum 8 karakterli güçlü bir şifre girin.",
@@ -29,13 +32,25 @@
   },
   "facility": {
     "name": "Tesis Adı",
-    "startdate": "Hizmet Başlangıcı",
-    "enddate": "Hizmet Bitişi",
+    "startdate": "Başlangıcı",
+    "enddate": "Bitişi",
     "remainingday": "Kalan Gün",
     "workers": "Çalışan Sayısı",
     "special": "Özel Tesis",
     "energydata": "Enerji Kullanım Verileri",
-    "add": "Tesis Ekle"
+    "add": "Tesis Ekle",
+    "usageadd": "Tüketim Ekle",
+    "unit": "Birim",
+    "daterange": "Tarih Aralığı",
+    "usage": "Kullanım",
+    "total": "Toplam",
+    "discounted": "İndirimli"
+  },
+  "analystics": {
+    "daymw": "Bugün Çekilen Güç",
+    "dayhz": "Ortalama Frekans",
+    "dayvolt": "Ortalama Gerilim",
+    "dayamper": "Ortalama Akım"
 
   }
 }
