@@ -3,7 +3,7 @@ export default class Facility {
     this.id = id,
     this.name = name;
     this.start_date = start_date;
-    this.service_end = end_date;
+    this.end_date = end_date;
     this.workers = workers;
     this.special = special;
   }
