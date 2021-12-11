@@ -5,6 +5,7 @@ import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import Facilities from "../views/Facilities.vue"
+import FacilityUsage from "../views/FacilityUsage.vue"
 import store from "../store";
 
 
@@ -23,6 +24,12 @@ const router = new Router({
       path: "/facilities",
       name: "facilities",
       component: Facilities,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: "/facilities/:id",
+      name: "facilityusage",
+      component: FacilityUsage,
       meta: { requiresAuth: true }
     },
     {
