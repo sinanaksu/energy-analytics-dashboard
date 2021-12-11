@@ -14,3 +14,8 @@ export const create = (facility) => {
 export const update = (facility) => {
   return axios.put(API_URL + "facility/", facility, { headers: authHeader() });
 };
+
+export const remove = (facility) => {
+  return axios.delete(API_URL + "facility/", { data: facility, headers: authHeader() });
+};
+

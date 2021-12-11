@@ -7,7 +7,8 @@ export default new Vuex.Store({
   state: {
     user : '',
     darkmode: false,
-    facilityReload: false
+    facilityReload: false,
+    facilityUsageReload: false
   },
   mutations: {
   },

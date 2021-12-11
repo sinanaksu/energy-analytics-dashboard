@@ -45,9 +45,9 @@
                       <div
                         class="btn-group"
                         role="group"
-                        aria-label="Basic outlined example"
                       >
                         <button
+                        @click="FicilityUsagePush(row.id)"
                           type="button"
                           class="btn btn-outline-success btn-sm"
                         >
@@ -55,6 +55,7 @@
                         </button>
                         <button
                           type="button"
+                          @click="remove(row.id)"
                           class="btn btn-outline-danger btn-sm"
                         >
                           <i class="bi bi-trash"></i>
@@ -86,7 +87,7 @@
 </template>
 
 <script>
-import { getAll } from "../service/facility";
+import { getAll, remove } from "../service/facility";
 import FacilityModal from "../components/FacilityModal.vue";
 import Facility from "../model/facility";
 import { mapState } from "vuex";
@@ -108,8 +109,15 @@ export default {
   },
   methods: {
     edit: function (id) {
-      this.editData = this.list.find((l) => l.id == id);
+      const select = this.list.find((l) => l.id == id);
+      this.editData = new Facility(select.id, select.name, select.start_date, select.end_date, select.workers, select.special);
       this.isModalVisible = true;
+    },
+    remove: function (id) {
+      const params = { "id": id };
+      remove(params).then(() => {
+        this.loadFacilities();
+      });
     },
     addFacility() {
       this.editData = new Facility();
@@ -133,6 +141,9 @@ export default {
       const days = Math.ceil(difference / (1000 * 3600 * 24));
       return days;
     },
+    FicilityUsagePush: function(id){
+      this.$router.push("/facilities/" + id)
+    }
   },
   mounted() {
     this.loadFacilities();
@@ -140,7 +151,7 @@ export default {
   watch: {
     facilityReload() {
       if (this.facilityReload) {
-        this.facilityReload = false;
+        this.$store.state.facilityReload = false;
         this.loadFacilities();
       }
     },
