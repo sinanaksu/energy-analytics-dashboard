@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span type="button" @click="switchRun()" > <span v-html="switchTitle"></span> </span>
+    <span role="button" @click="switchRun()" > <span v-html="switchTitle"></span> </span>
   </div>
 </template>
 

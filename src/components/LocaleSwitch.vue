@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span type="button" @click="switchRun()" > {{ switchTitle }} </span>
+    <span role="button" @click="switchRun()" > {{ switchTitle }} </span>
   </div>
 </template>
 
