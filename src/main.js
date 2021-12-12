@@ -4,6 +4,7 @@ import store from './store'
 import Vuex from 'vuex';
 import router from './router'
 import i18n from './i18n'
+import HighchartsVue from "highcharts-vue";
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,6 +12,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 
 Vue.config.productionTip = false
 Vue.use(Vuex);
+Vue.use(HighchartsVue);
 
 new Vue({
   store,
