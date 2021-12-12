@@ -38,73 +38,12 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#app {
-  font-family: "Rubik", sans-serif !important;
-  background-image: linear-gradient(100deg, #c1dfc4 0%, #deecdd 100%);
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  position: fixed;
-  overflow-y: scroll;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition-duration: 0.2s;
-  transition-property: opacity;
-  transition-timing-function: ease;
-}
-
-.fade-enter,
-.fade-leave-active {
-  opacity: 0;
-}
-
-.logo {
-  -webkit-filter: drop-shadow(0 0 1px rgb(255, 255, 255));
-  filter: drop-shadow(0 0 1px rgb(255, 255, 255));
-}
+@import "./assets/style.scss";
 
 :root {
   @import "../node_modules/bootstrap/scss/functions";
   @import "../node_modules/bootstrap/scss/variables";
   @import "../node_modules/bootstrap/scss/mixins";
-
-  .dark {
-    background-image: none !important;
-    background-color: rgb(53, 53, 53);
-    $card-bg: rgb(167, 167, 167);
-    $enable-gradients: true;
-    $primary: #002b57;
-    $secondary: #afafaf;
-    $success: #007e2a;
-    $dark: #000;
-    $danger: rgb(111, 0, 0);
-    $white:    rgb(255, 255, 255);
-
-    $theme-colors: (
-      "white": $white,
-      "primary": $primary,
-      "secondary": $secondary,
-      "success": $success,
-      "danger": $danger,
-      "dark": $dark,
-      "light": #aaa,
-    );
-
-    $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
-
-    @each $color, $value in $theme-colors-rgb {
-      --#{$variable-prefix}#{$color}-rgb: #{$value};
-    }
-
-    $body-color: #eeeeee;
-    $body-bg: #263c5c;
-
-    --#{$variable-prefix}body-color: #{$body-color};
-    --#{$variable-prefix}body-bg: #{$body-bg};
-    @import "bootstrap";
-  }
+  @import "./assets/dark.scss";
 }
 </style>

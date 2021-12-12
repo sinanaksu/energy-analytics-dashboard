@@ -1,0 +1,35 @@
+.dark {
+    background-image: none !important;
+    background-color: rgb(53, 53, 53);
+    $card-bg: rgb(167, 167, 167);
+    $enable-gradients: true;
+    $primary: #002b57;
+    $secondary: #afafaf;
+    $success: #007e2a;
+    $dark: #000;
+    $danger: rgb(111, 0, 0);
+    $white:    rgb(255, 255, 255);
+
+    $theme-colors: (
+      "white": $white,
+      "primary": $primary,
+      "secondary": $secondary,
+      "success": $success,
+      "danger": $danger,
+      "dark": $dark,
+      "light": #aaa,
+    );
+
+    $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+    @each $color, $value in $theme-colors-rgb {
+      --#{$variable-prefix}#{$color}-rgb: #{$value};
+    }
+
+    $body-color: #eeeeee;
+    $body-bg: #263c5c;
+
+    --#{$variable-prefix}body-color: #{$body-color};
+    --#{$variable-prefix}body-bg: #{$body-bg};
+    @import "bootstrap";
+  }
