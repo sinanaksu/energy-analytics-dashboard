@@ -7,7 +7,7 @@ import Logout from "../views/Logout.vue";
 import Facilities from "../views/Facilities.vue"
 import FacilityUsage from "../views/FacilityUsage.vue"
 import store from "../store";
-
+import { getUser, logout } from "../service/user";
 
 Vue.use(Router);
 
@@ -58,6 +58,13 @@ router.beforeEach((to, from, next) => {
         params: { nextUrl: to.fullPath },
       });
     } else {
+      getUser().catch(function () {
+        logout();
+        next({
+          path: "/login",
+        });
+      });
+
       const user = JSON.parse(localStorage.getItem("user"));
       if (to.matched.some((record) => record.meta.is_admin)) {
         if (user.role == 1) {
