@@ -50,7 +50,17 @@
       "daymw": "Power Drawn Today",
       "dayhz": "Average Frequency",
       "dayvolt": "Average Voltage",
-      "dayamper": "Average Current"
-  
+      "dayamper": "Average Current",
+      "consumptionheatmap": "Consumption Heat Map (Last 7 Days)",
+      "series": {
+        "phases": {
+          "title": "Voltage - Today",
+          "symbol": "V"
+        },
+        "frequency": {
+          "title": "Frequency - Today",
+          "symbol": "Hz"
+        }
+      }
     }
   }

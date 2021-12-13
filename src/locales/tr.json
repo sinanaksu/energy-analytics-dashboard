@@ -50,7 +50,17 @@
     "daymw": "Bugün Çekilen Güç",
     "dayhz": "Ortalama Frekans",
     "dayvolt": "Ortalama Gerilim",
-    "dayamper": "Ortalama Akım"
-
+    "dayamper": "Ortalama Akım",
+    "consumptionheatmap": "Tüketim Isı Haritası (Son 7 Gün)",
+    "series": {
+      "phases": {
+        "title": "Gerilim - Bugün",
+        "symbol": "V"
+      },
+      "frequency": {
+        "title": "Frekans - Bugün",
+        "symbol": "Hz"
+      }
+    }
   }
 }
